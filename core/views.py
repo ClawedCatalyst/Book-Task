@@ -38,7 +38,7 @@ class BookDetailView(
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
-    
+
     def delete(self, request, isbn):
         book = get_object_or_404(Book, ISBN=isbn)
         book.delete()
