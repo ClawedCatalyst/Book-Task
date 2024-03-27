@@ -8,6 +8,10 @@
 ### 2) GET `/api/books/`
 <img width="999" alt="image" src="https://github.com/ClawedCatalyst/Book-Task/assets/97229491/421f9373-e37c-4ce3-8b8d-cd6a0ebe84f7">
 
+#### 2.1) Pagination in  GET `/api/books/`
+<img width="1012" alt="image" src="https://github.com/ClawedCatalyst/Book-Task/assets/97229491/63fd9f79-e36d-4452-970f-3c605c6a661b">
+<img width="1011" alt="image" src="https://github.com/ClawedCatalyst/Book-Task/assets/97229491/646c62ee-5d0e-4cc6-a719-84603ebd0f47">
+
 ### 3) GET `/api/books/<isbn>`
 <img width="993" alt="image" src="https://github.com/ClawedCatalyst/Book-Task/assets/97229491/c311bfe2-e309-42f2-926b-bc1fc7762b61">
 
