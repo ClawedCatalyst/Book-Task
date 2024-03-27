@@ -28,11 +28,18 @@ class BookDetailView(
     serializer_class = BookSerializer
 
     def get(self, request, isbn):
-        book = get_object_or_404(Book, isbn=isbn)
+        book = get_object_or_404(Book, ISBN=isbn)
         serializer = self.serializer_class(book, many=False)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def patch(self, request, isbn):
+        book = get_object_or_404(Book, ISBN=isbn)
+        serializer = self.serializer_class(book, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+    
     def delete(self, request, isbn):
-        book = get_object_or_404(Book, isbn=isbn)
+        book = get_object_or_404(Book, ISBN=isbn)
         book.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
